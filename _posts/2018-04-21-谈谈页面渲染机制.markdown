@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "谈谈页面渲染机制
+title:      "谈谈页面渲染机制"
 subtitle:   " \"谈谈页面渲染机制\""
 date:       2018-04-21 12:00:00
 author:     "xiaobai"
@@ -48,7 +48,7 @@ HTML5因为不基于 SGML，因此不需要对DTD进行引用;但是需要doctyp
 
 首先放一张浏览器渲染流程图（网络上找的）
 
-
+![浏览器渲染流程图](https://img-blog.csdn.net/20180421114818971?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjg1MjIzNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 
 当浏览器拿到 HTML 和css，通过HTML解析器和css解析器分别生成DOM tree 和 CSSom两者结合形成renderTree ,此时的renderTree还不知道在哪个位置放置节点，是通过浏览器的Layout告诉它具体的位置样式，最后绘制出我们最终看到的页面效果。这个就是浏览渲染的基本过程。
