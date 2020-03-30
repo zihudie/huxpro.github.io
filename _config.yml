@@ -1,10 +1,10 @@
 # Site settings
-title: Wuxiaobai Blog
+title: 小白的自留地
 SEOTitle: 吴小白的博客 | wuxiaobai Blog
 header-img: img/home-bg.jpg
 email: wuyaofang401@163.com
 description: "关于程序与设计 | 吴小白 Web| 这里是 @wuxiaobai 的个人博客，我想成为一个更好的人，与你一起发现更大的世界。"
-keyword: "吴小白, wuxiaobai, 吴小白的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
+keyword: "吴小白, wuxiaobai, 吴小白的博客, xiabai Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
 url: "http://www.wuxiaobai.xyz"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -12,7 +12,7 @@ baseurl: ""                             # for example, '/blog' if your blog host
 future: true
 # SNS settings
 RSS: false
-weibo_username:     丫头说要变成大白
+weibo_username:     u/2032893345
 #zhihu_username:     huxpro
 github_username:    zihudie
 #twitter_username:   huxpro
