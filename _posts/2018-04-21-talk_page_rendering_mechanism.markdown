@@ -4,7 +4,7 @@ title:      "谈谈页面渲染机制"
 subtitle:   " \"谈谈页面渲染机制\""
 date:       2018-04-21 12:00:00
 author:     "xiaobai"
-header-img: "img/post-bg-2015.jpg"
+header-style: text
 catalog: true
 tags:
     - 程序世界

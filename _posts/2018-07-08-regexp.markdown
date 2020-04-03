@@ -1,0 +1,173 @@
+---
+layout:     post
+title:      "正则表达式方法总结"
+subtitle:   " \"正则中的符号相当多，如果不进行下分类，这种火星文真的很难去记忆。\""
+date:       2018-07-08 01:06:12
+author:     "xiaobai"
+header-style: text
+catalog: true
+tags:
+    - 程序世界
+     
+---
+
+如果用一个形容词来形容正则的话我觉得那就是火星文，对于一个不了解的它的人来说可读性实在是太差。但对于开发人员来说，很多时候它为我们带来了很多的方便。
+
+正则中的符号相当多，如果不进行下分类，这种火星文真的很难去记忆。
+
+1. 元字符
+
+  
+
+tips:
+
+常见的还有
+
+\b：匹配一个词的边界。
+
+/\bm/匹配“moon”中得‘m’；
+
+  
+
+-   /oo\b/并不匹配"moon"中得'oo'，因为'oo'被一个“字”字符'n'紧跟着。
+
+\B匹配一个非单词边界
+
+  
+
+**^如果在一个集合中，表示排除，而不是以某种匹配模式开头即反向字符集eg:[^xyz]**
+
+\s 等价于:
+
+[\f\n\r\t\v\u00a0\u1680\u180e\u2000\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]。
+
+\S等价于:
+
+[^ \f\n\r\t\v\u00a0\u1680\u180e\u2000\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]
+
+  
+
+2. 量词
+
+![](https://img-blog.csdn.net/20180708012430826?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjg1MjIzNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)![](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw== "Click and drag to move")​
+
+  
+
+  
+
+  
+
+  
+
+3．分支和字符集
+
+  
+
+-   (a|b|c)
+=== [a-c]
+-   /(ab|bb|cb)/ === /[abc]b/
+-   [abc] === [a-c]
+-   [^abc] === [^a-c]
+
+4．分组&引用
+
+l /(\d{4})-(\d{2})-(\d{2})/ 【分组】
+
+![](https://img-blog.csdn.net/20180708010415855?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjg1MjIzNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)![](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw== "Click and drag to move")​
+
+l /(\d{4})-(\d{2})-\2/ 【引用】
+
+  
+
+第三个匹配项目 引用第二分组的模式 当两者相等的时候才会进行匹配
+
+![](https://img-blog.csdn.net/20180708010435999?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjg1MjIzNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)![](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw== "Click and drag to move")​
+
+l /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/
+
+“
+
+l /(?<year>\d{4})-(?<month>\d{2})-\k<month>/
+
+5. replace
+
+‘2018-09—07’.replace(/(\d{4})-(\d{2})-(\d{2})/,‘$1年$2月$3日’)
+
+6. RegExp.$[_1-9]
+
+![](https://img-blog.csdn.net/20180708010520207?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjg1MjIzNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)![](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw== "Click and drag to move")​表示字符串本身
+
+5.转义
+
+1. 使⽤用\ 转义
+
+2. 需要转义的字符?
+
+Tips：
+
+当需要使用正则字符本身的时候就需要用转义字符
+
+6.零宽断言(lookaround assertions)
+
+1. 也翻译成 环视
+
+2. 根据⽅方向的不不同，分为lookahead 和lookbehind 3. 根据判定原则，分为 肯定 和 否定
+
+![](https://img-blog.csdn.net/20180708012445832?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjg1MjIzNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)![](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw== "Click and drag to move")​
+
+  
+
+  
+
+  
+
+7. 惰性&贪婪
+
+l 贪婪模式——在匹配成功的前提下，尽可能多的去匹配
+
+l 惰性模式——在匹配成功的前提下，尽可能少的去匹配
+
+l /.*bbb/g.test(‘abbbaabbbaaabbb1234') 4. /.*?bbb/g.test(‘abbbaabbbaaabbb1234’)
+
+![](https://img-blog.csdn.net/20180708010535563?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjg1MjIzNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)![](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw== "Click and drag to move")​
+
+根据样本选择匹配模式
+
+l 贪婪模式⽤用于匹配优先量量词修饰的⼦子表达式
+
+l 惰性模式⽤用于匹配忽略略优先量量词修饰⼦子表达式
+
+  
+
+8.修饰符&标志
+
+1. g → global
+
+2. i → ignoreCase
+
+3. m → multiline
+
+4. y → sticky
+
+5. u → unicode
+
+6. s → dotAll
+
+  
+
+9.使用方法
+
+![](https://img-blog.csdn.net/2018070801250479?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjg1MjIzNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)![](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw== "Click and drag to move")​
+
+  
+
+
+  
+
+参考
+
+[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+
+[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#assertions](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#assertions)
+
+**正则表达式方法总结**

@@ -4,7 +4,7 @@ title:      "Javascript异步编程方法有哪些"
 subtitle:   " \"Javascript异步编程方法有哪些\""
 date:      2018-05-13 23:55:12 
 author:     "xiaobai"
- header-img: " "
+header-style: text
 catalog: true
 tags:
     - 程序世界
