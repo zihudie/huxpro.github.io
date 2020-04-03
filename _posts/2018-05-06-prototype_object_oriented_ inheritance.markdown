@@ -4,7 +4,7 @@ title:      "深入理解原型链和面向对象的继承"
 subtitle:   " \"深入理解原型链和面向对象的继承\""
 date:       2018-05-06  19:38:26 
 author:     "xiaobai"
- 
+header-img: " "
 catalog: true
 tags:
     - 程序世界
