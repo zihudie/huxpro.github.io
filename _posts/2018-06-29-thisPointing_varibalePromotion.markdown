@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "关于this指向，变量提升以及跨域的解决方案"
+title:      "this指向，变量提升"
 subtitle:   " \"关于this指向，变量提升以及跨域的解决方案\""
 date:      2018-06-29 18:08:00
 author:     "xiaobai"
