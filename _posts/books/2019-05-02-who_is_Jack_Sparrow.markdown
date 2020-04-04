@@ -2,17 +2,18 @@
 layout:     post
 title:      "who is Jack Sparrow"
 subtitle:   " \"who is Jack Sparrow\""
-date:       2020-04-03 12:00:00
+date:       2019-05-02 12:00:00
 author:     "xiaobai"
 header-img: "img/post-bg-2015.jpg"
 catalog: true
 tags:
     - 读书世界
     - 加勒比海盗
+     - English
      
 ---
 
-- 5.27
+### 5.27
 
 ![img_3293.jpg](http://note.youdao.com/yws/public/resource/811544742d8046056bc4442b6c53a9d2/WEBRESOURCE763a6451c69049a02e8cd46c45268d64?ynotemdtimestamp=1585972411832)
 
@@ -27,7 +28,7 @@ Jack had  a compass. It was a magic compass, not only did it can indicate direct
 I do want to have a compass like it. So that  I  can get to there where i want ,and find peopel who I love. 
 
 
-- 5.29
+###  5.29
 
 Jack Sparrow  set  a code of  behavior for the pirates. For example  everyone has equal right for daily events(事件，) ，but they should obey the capitan's order .
 gambling  is  prohibtened on ships;and so on.
