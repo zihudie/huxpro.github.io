@@ -217,6 +217,7 @@ Json+padding:
 
 服务端返回如下（返回时即执行全局函数）：
 onBack({"status": true, "user": "admin"})
+
 ```
 
 ![](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw== "Click and drag to move")
