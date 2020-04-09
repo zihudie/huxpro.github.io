@@ -16,7 +16,7 @@ tags:
 
 ---
 
-I am xiaobai, this is Blog is concerned about Web Front-End,my thinking about my life and my review of  books, maybe something else interisting.
+I am xiaobai, this  Blog is concerned about Web Front-End,my thinking about life and my review of  books, maybe something else interisting.
 
 <!-- 
 <p id = "build"></p> -->
@@ -26,7 +26,5 @@ I am xiaobai, this is Blog is concerned about Web Front-End,my thinking about my
 
 
  
-
-—— 小白 记于 2020-03-30
-
+ 
 
