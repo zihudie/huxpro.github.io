@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "some articles from liliushuo"
-subtitle:   " \"some articles from liliushuo\""
+title:      "some articles from liulishuo"
+subtitle:   " \"some articles from liulishuo\""
 date:       2019-05-16 12:00:00
 author:     "xiaobai"
 header-img: "img/post-bg-2015.jpg"
