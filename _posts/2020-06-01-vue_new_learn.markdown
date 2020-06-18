@@ -2,7 +2,7 @@
 layout:     post
 title:      "最近新get到的vue新功能"
 subtitle:   " \"最近新get到的vue新功能\""
-date:      2019-06-01 20:55:12 
+date:      2020-06-01 20:55:12 
 author:     "xiaobai"
 header-style: text
 catalog: true
@@ -17,11 +17,16 @@ tags:
 
 ### 组件递归
 > 组件是可以在它们自己的模板中调用自身的。不过它们只能通过 `name` 选项来做这件事：
+
+
 ```javascript
 // 一般编写复杂组件的时候可能会用到，平常业务中可能不太用上，先记下
 name: 'unique-name-of-my-component'
 ```
+
+
 ### sync
+
 ```javascript
 // 父组件
 <message :show.sync="show">添加成功</message>
@@ -78,8 +83,10 @@ default {
       }
     }
   };</script>
+
 ```
  -  自定义model
+
  ```javascript
  // 父组件
  <base-checkbox  v-model="loginvue" @change="customizeChange" />
@@ -173,6 +180,7 @@ clearInterval(timer)
 ###  全局挂载组件
 
 -  Message  提示弹框
+
 ```javascript
 
 // Message/index.js
@@ -244,6 +252,7 @@ default {
 
 ```
  -   confirm 弹框，方法类写在inde.js中，通过实例创建。
+
  ```javascript
  // comfrim/index.js
  import confirm from './confirm';
@@ -296,7 +305,9 @@ const Confirm = (options = {}) = >{
 }
 
 export default Confirm;
- ```
+
+```
+
 ```javascript
 // confirm/confirm.vue
 <template>
@@ -336,8 +347,6 @@ default {
 
 ```
 
-
-
 ## css 部分
 
 ### 样式穿透
@@ -356,15 +365,18 @@ default {
   height: 60px;
 }
 </style >
+
 - stylus使用 >>> 
 <style scoped lang = "stylus" > 
 外层 >>> .custon - components {
     height: 60px;
-} < /style>/
+} < /style>
+
 ```
 
 ### css module
 同scoped 一样起到隔绝作用域的功能。相比于scoped 它更能减少命名冲突,为每一个局部类赋予全局唯一的类名，这样组件样式间就不会相互影响了 .
+
 ```javascript
  
 <template>
@@ -393,7 +405,9 @@ console.log(this.$style.red)
 ```
 
 ### svg loading
+
 > 发现了一个类google的loading动画
+
 ```html
 <svg class="circular" viewBox="25 25 50 50">
   <circle class="path" cx="50" cy="50" r="15" fill="none" stroke-width="2" stroke-miterlimit="10" /></svg>
